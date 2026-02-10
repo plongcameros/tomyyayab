@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Be My Valentine ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:url("front.png") no-repeat center center;
+    background-size:cover;
+    font-family:'Poppins', sans-serif;
+    overflow:hidden;
+}
+
+/* buttons */
+.buttons{
+    position:absolute;
+    bottom:10%;
+    display:flex;
+    gap:20px;
+}
+
+/* general button */
+button{
+    padding:14px 30px;
+    font-size:18px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    transition:0.25s ease;
+}
+
+/* YES button */
+.yes{
+    background:#ff6b81;
+    color:white;
+    animation:bounce 1.2s infinite;
+}
+
+.yes:hover{
+    transform:scale(1.1);
+}
+
+/* NO button */
+.no{
+    background:#6c757d;
+    color:white;
+}
+
+/* bounce animation */
+@keyframes bounce{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-6px); }
+}
+
+/* mobile */
+@media(max-width:768px){
+    .buttons{
+        flex-direction:column;
+        gap:12px;
+        width:80%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="buttons">
+    <button class="yes" onclick="nextPage()">Yes ❤️</button>
+    <button class="no">No 🙈</button>
+</div>
+
+<script>
+function nextPage(){
+    window.location.href="gallery.html";
+}
+</script>
+
+</body>
+</html>
