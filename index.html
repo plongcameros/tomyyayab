@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Be My Valentine</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* BACKGROUND */
+body{
+    height:100vh;
+    width:100vw;
+    background:url("frontpage.png") no-repeat center center/cover;
+    font-family: "Times New Roman", serif;
+    overflow:hidden;
+}
+
+/* BUTTON AREA */
+.buttons{
+    position:fixed;
+    bottom:40px;
+    left:50%;
+    transform:translateX(-50%);
+    width:90%;
+    max-width:420px;
+
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+/* YES BUTTON */
+.yes-btn{
+    background:#ff4d6d;
+    color:white;
+    border:none;
+    padding:16px;
+    font-size:20px;
+    border-radius:40px;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+/* click effect */
+.yes-btn:hover{
+    transform:scale(1.05);
+}
+
+/* NO BUTTON */
+.no-btn{
+    background:#6c757d;
+    color:white;
+    border:none;
+    padding:16px;
+    font-size:20px;
+    border-radius:40px;
+}
+
+/* MOBILE FIX */
+@media (max-width:768px){
+    .buttons{
+        bottom:30px;
+        gap:12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="buttons">
+    <button class="yes-btn" onclick="goToNextPage()">Yes ❤️</button>
+    <button class="no-btn">No 🙈</button>
+</div>
+
+<script>
+function goToNextPage(){
+    window.location.href = "gallery.html";
+}
+</script>
+
+</body>
+</html>
